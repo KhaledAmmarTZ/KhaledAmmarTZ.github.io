@@ -11,145 +11,140 @@
     overflow-x: hidden;
   }
 
-  header {
-    width: 100%;
-    padding: 40px 70px;
+  nav {
+    position: relative;
+    padding: 10px 40px;
+    background-color: #F5F5F5;
+    height: 80px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .nav-group {
     display: flex;
-    gap: 50px;
+    gap: 15px;
+    z-index: 1;
   }
 
   .nav-button {
-    padding: 5px 13px;
-    outline: 5px solid #00CDB5;
-    outline-offset: -2.5px;
-    font-size: 24px;
-    color: black;
-    cursor: pointer;
+font-family: 'Jersey 25', sans-serif;
+font-size: 24px;
+font-weight: 400;
+color: black;
+padding: 5px 13px;
+outline: 5px #00CDB5 solid;
+outline-offset: -2.5px;
+display: flex;
+align-items: center;
+justify-content: center;
+white-space: nowrap;
+}
+
+  .logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .logo-center img {
+    width: 100px;
+    height: auto;
   }
 
   .hero-text {
-    position: absolute;
-    top: 107px;
-    left: 87px;
+    font-family: 'Jersey 25', sans-serif;
     font-size: 96px;
+    font-weight: 400;
     color: black;
+    text-align: center;
+  
+    margin-top: 10px; /* space below navbar */
+    width: 100%;
   }
-
+  
   .hero-text span {
     display: block;
+    padding: 10px;
+    word-wrap: break-word;
   }
-
+  
+  @media (max-width: 768px) {
+    .hero-text {
+      font-size: 40px;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-text {
+      font-size: 32px;
+      margin-top: 10px;
+    }
+  }
+  
   .hero-subtext {
-    position: absolute;
-    top: 271px;
-    left: 89px;
+    font-family: 'Jersey 25', sans-serif;
     font-size: 48px;
+    font-weight: 400;
     color: black;
+    text-align: center;
+  
+    margin-top: 20px;
+    width: 100%;
   }
-
-  .cta {
-    position: absolute;
-    top: 364px;
-    left: 110px;
-    background: white;
-    outline: 32px solid #076156;
-    outline-offset: -16px;
-    padding: 10px 20px;
-    font-size: 32px;
-    color: white;
-    display: inline-block;
+  
+  .hero-image {
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -205px; /* This moves the image up */
   }
-
-  .photo-container {
-    position: absolute;
-    top: 462px;
-    left: 473.95px;
-    width: 491px;
-    height: 491px;
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
   }
+  
 
-  .circle-bg1,
-  .circle-bg2,
-  .circle-bg3 {
-    position: absolute;
-    border-radius: 9999px;
+  @media (max-width: 768px) {
+    .hero-subtext {
+      font-size: 32px;
+      margin-top: 16px;
+    }
   }
-
-  .circle-bg1 {
-    top: 507.92px;
-    left: 498.5px;
-    width: 441.45px;
-    height: 438.72px;
-    background: linear-gradient(359deg, #F5F5F5 0%, #005D52 100%);
-  }
-
-  .circle-bg2 {
-    top: 644.76px;
-    left: 505.09px;
-    width: 428.72px;
-    height: 301.87px;
-    background: linear-gradient(360deg, #157E72 0%, #F5F5F5 100%);
-  }
-
-  .circle-bg3 {
-    top: 507.92px;
-    left: 498.5px;
-    width: 441.45px;
-    height: 438.72px;
-    background: #076156;
-  }
-
-  .photo-container img {
-    width: 491px;
-    height: 491px;
-    border-radius: 50%;
-  }
-
-  .decor-line {
-    position: absolute;
-    width: 49.36px;
-    height: 5.28px;
-    background: #076156;
-  }
-
-  .decor-line.left {
-    left: 498.5px;
-    top: 723.58px;
-  }
-
-  .decor-line.right {
-    left: 890.56px;
-    top: 723.58px;
+  
+  @media (max-width: 480px) {
+    .hero-subtext {
+      font-size: 24px;
+      margin-top: 12px;
+    }
   }
 
   @media (max-width: 768px) {
-    .hero-text {
-      font-size: 48px;
-      top: 80px;
-      left: 20px;
+    nav {
+      height: auto;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .hero-subtext {
-      font-size: 24px;
-      top: 200px;
-      left: 20px;
+    .logo-center {
+      position: relative;
+      left: 0;
+      transform: none;
+      order: -1;
+      margin-bottom: 10px;
     }
 
-    .cta {
-      top: 260px;
-      left: 20px;
-      font-size: 20px;
-      outline-width: 16px;
-      outline-offset: -8px;
-    }
-
-    .photo-container {
-      display: none;
+    .nav-group {
+      justify-content: center;
+      flex-wrap: wrap;
     }
   }
