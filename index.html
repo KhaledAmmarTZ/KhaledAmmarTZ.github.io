@@ -9,15 +9,15 @@
   <link rel="stylesheet" href="styles.css" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
 
   <nav class="container-fluid">
     <div class="nav-group">
-      <div class="nav-button">Home</div>
       <div class="nav-button">About</div>
-      <div class="nav-button">Contact Me</div>
+      <div class="nav-button" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Me</div>
     </div>
 
     <div class="logo-center">
@@ -43,7 +43,6 @@
     <img src="images/portbanner.png" alt="Profile Photo">
   </div>
 
-  <!-- New section with a different background color -->
   <div class="custom-section">
     <h2>About Me</h2>
     <p>
@@ -61,6 +60,30 @@
     <a href="#contact" class="btn btn-primary mt-3">Contact Me</a>
   </div>
 
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <h5 class="modal-title w-100" id="contactModalLabel">Contact Me</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="mx-3" title="LinkedIn">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="mx-3" title="WhatsApp">
+            <i class="fab fa-whatsapp fa-2x"></i>
+          </a>
+          <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank" class="mx-3" title="Facebook">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 
