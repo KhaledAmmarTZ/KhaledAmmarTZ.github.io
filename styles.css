@@ -268,3 +268,17 @@ nav {
   }
 }
 
+.project-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,205,181,0.15);
+}
+.project-card-border {
+  border-bottom: 2px solid #00CDB5;
+}
+.project-img-border:hover {
+  box-shadow: 0 0 16px #00CDB5;
+}
